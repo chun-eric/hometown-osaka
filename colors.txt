@@ -1,0 +1,8 @@
+#color scheme
+
+
+#DD7A6F
+#A88B73 
+#6D5459
+#39A6A8
+
