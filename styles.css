@@ -319,6 +319,7 @@ h2 {
 .text p {
   margin: 30px 0px;
   font-size: 24px;
+  color: #222;
 }
 
 .email {
@@ -368,14 +369,14 @@ input:focus {
 footer {
   width: 100%;
   height: fit-content;
-  color: #222;
+  color: #111;
   font-family: "Nunito Sans", sans-serif;
   font-weight: bold;
   font-size: 18px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 80px 0px 0px;
+  padding: 60px 0px 0px;
   list-style-type: none;
   position: relative;
   background-color: rgb(255, 255, 232);
@@ -449,7 +450,7 @@ footer {
   z-index: 3;
   background-color: transparent;
   position: relative;
-  margin-top: -50px;
+  margin-top: -40px;
 }
 
 .footer-image {
