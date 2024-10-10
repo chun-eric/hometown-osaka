@@ -37,13 +37,17 @@
     <div class="container">
       <!-- navbar -->
       <nav>
+        <div><img src="./images/logo.png" alt="" /></div>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="index.html">Attractions</a></li>
           <li><a href="index.html">Events</a></li>
-          <li><a href="index.html">Information</a></li>
           <li><a href="index.html">About</a></li>
         </ul>
+        <div>
+          <button>Sign Up</button>
+          <button>Sign In</button>
+        </div>
       </nav>
 
       <!-- hero -->
@@ -90,12 +94,50 @@
 
       <!-- Travel Guide -->
       <div class="guide">
-        <h2>Travel Guide</h2>
-        <img src="./images/guide.png" alt="" />
+        <div class="guide-image"></div>
+        <div class="guide-text">
+          <div class="text">
+            <h3>Meet Your Travel Guide</h3>
+            <p>
+              Konnichiwa! I'm <strong>Shinji-kun</strong>, your friendly Osaka
+              guide. Are you ready to unlock the Osaka's hidden gems and
+              must-see spots? From delicious street food to amazing attractions,
+              I'll guide you through the best of what Osaka has to offer.
+              Subscribe to our email to get more amazing tips!
+            </p>
+          </div>
+          <div class="email">
+            <input type="email" placeholder="Enter your email" />
+            <button type="submit" id="subsribe">Subscribe</button>
+          </div>
+        </div>
       </div>
 
       <!-- Footer -->
-      <footer></footer>
+      <footer>
+        <div class="footer-upper">
+          <div class="footer-links">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html">Attractions</a></li>
+              <li><a href="index.html">Events</a></li>
+              <li><a href="index.html">About</a></li>
+            </ul>
+          </div>
+          <div class="footer-text">
+            <p>Copyright © 2024 Osaka Hometown. <br/>All rights reserved.</p>
+          </div>
+          <div class="footer-icons">
+            <img src="./images/icons/facebook.svg" alt="" />
+            <img src="./images/icons/twitter.svg" alt="" />
+            <img src="./images/icons/linkedin.svg" alt="" />
+          </div>
+        </div>
+        <div class="footer-lower">
+          <div class="footer-image"></div>
+        </div>
+      </footer>
     </div>
+    <script src="script.js" defer></script>
   </body>
 </html>
