@@ -43,7 +43,7 @@ body {
   justify-content: center;
   width: 100%;
   padding: 1rem 0rem;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid #c5c5c5;
 }
 
 nav {
@@ -207,74 +207,102 @@ nav li a:hover {
 
 /* Hero section */
 .hero {
-  margin: 350px auto;
+  margin: 350px auto 0;
   width: 100%;
-  height: auto;
+  height: 0; /* */
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
   position: relative;
 }
 
 .hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding-top: 56.25%;
-  /* 16:9 aspect ratio */
+  height: 100%;
   background-image: url("./images/osaka-hero2.png");
   background-size: cover;
   background-position: center;
-  position: relative;
   z-index: 1;
 }
 
 .hero-content {
   position: absolute;
-  top: -27%;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 2;
-  text-align: center;
-  padding: 150px 0;
 }
 
 .hero-text {
-  text-align: center;
+  position: absolute;
+  top: -25%; /* Adjust this value to move the text up or down */
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
-  left: 0;
+  text-align: center;
 }
 
 .hero .hero-heading {
-  font-size: 200px;
+  font-size: 14vw; /* Adjusted for better scaling */
   text-transform: uppercase;
   text-align: center;
   font-family: "Fraunces", serif;
   font-weight: 800;
   letter-spacing: 2px;
+  line-height: 1;
+  margin-bottom: 2vh; /* Use viewport height for consistent spacing */
 }
 
 .hero h3 {
-  font-size: 40px;
+  font-size: 2.5vw; /* Adjusted for better scaling */
   text-align: center;
   font-family: "Fraunces", serif;
   font-weight: 600;
   letter-spacing: 2px;
 }
 
+/* Media Queries for fine-tuning */
 @media (max-width: 1200px) {
+  .hero-text {
+    top: -22%; /* Slight adjustment for medium screens */
+  }
+
   .hero .hero-heading {
-    font-size: 120px;
+    font-size: 13vw;
   }
 
   .hero h3 {
-    font-size: 36px;
+    font-size: 3vw;
   }
 }
 
 @media (max-width: 768px) {
+  .hero-text {
+    top: -28%; /* Adjustment for smaller screens */
+  }
+
   .hero .hero-heading {
-    font-size: 80px;
+    font-size: 13vw;
   }
 
   .hero h3 {
-    font-size: 24px;
+    font-size: 3.5vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text {
+    top: -42%; /* Further adjustment for mobile screens */
+  }
+
+  .hero .hero-heading {
+    font-size: 15vw;
+  }
+
+  .hero h3 {
+    font-size: 4vw;
   }
 }
 
