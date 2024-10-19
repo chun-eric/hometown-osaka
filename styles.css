@@ -529,6 +529,9 @@ input:focus {
     display: flex;
     flex-direction: column;
   }
+  .email input::placeholder {
+    text-align: center;
+  }
 }
 
 /* Footer */
