@@ -402,8 +402,8 @@ h2 {
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 500px;
-  padding: 30px;
+  height: auto;
+  padding: 30px 0px 50px;
   border-radius: 15px;
   align-items: center;
 }
@@ -422,11 +422,11 @@ h2 {
   background-repeat: no-repeat;
   background-position: center;
   width: 40%;
-  height: 100%;
+  height: 400px; /* explicity setting height shows the image*/
 }
 
 .guide-text {
-  padding: 40px 0px 10px;
+  padding: 40px 40px 0px 10px;
   width: 60%;
   height: 100%;
   display: flex;
@@ -447,11 +447,12 @@ h2 {
   text-align: left;
   margin-top: 10px;
   display: flex;
-  position: relative;
+  /* position: relative; */
 }
 
 input {
-  width: 80%;
+  flex: 1; /* allows input to grow and take up available space */
+  max-width: 500px; /**/
   height: 60px;
   font-size: 18px;
   border-radius: 5px;
@@ -466,18 +467,16 @@ input:focus {
 }
 
 #subsribe {
-  width: 20%;
+  flex: 0 0 auto; /* allows input to grow and take up available space */
+  min-width: 140px; /**/
   height: 60px;
   font-size: 18px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   border: 0.5px solid var(--teal);
   background-color: var(--teal);
   color: #fff;
   cursor: pointer;
-  display: inline-block;
-  position: absolute;
-  right: 100px;
   transition: all 0.3s ease;
 }
 
@@ -486,34 +485,49 @@ input:focus {
   border: 0.5px solid var(--lightred);
 }
 
-@media (max-width: 768px) {
-  .guide-container {
+@media (max-width: 899px) {
+  .guide {
     flex-direction: column;
-    height: auto;
+    padding: 60px 0;
   }
-
-  .guide-image,
-  .guide-text {
-    width: 100%;
-    height: auto;
+  .guide-container {
+    display: flex;
+    flex-direction: column;
   }
 
   .guide-image {
-    margin-bottom: 30px;
+    width: 90%;
+    height: 300px;
+    margin-bottom: 20px;
   }
-
+  .guide-text {
+    padding: 20px 0px;
+    width: 85%;
+  }
+  .text p {
+    font-size: 20px;
+  }
+  .text h3 {
+    text-align: center;
+  }
   .email {
     flex-direction: column;
+    /* ensures full width to the children */
   }
-
-  input,
+  .email input,
   #subsribe {
-    width: 100%;
-    border-radius: 5px;
+    max-width: 98%; /* stretches input and button to just under full width */
+    margin-bottom: 10px;
+    height: 50px !important;
+    border-radius: 3px;
   }
-
-  #subsribe {
-    margin-top: 10px;
+  input {
+    height: 50px !important;
+    padding: 15px 0px 15px 10px; /**/
+  }
+  .email {
+    display: flex;
+    flex-direction: column;
   }
 }
 
