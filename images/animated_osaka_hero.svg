@@ -1,0 +1,44 @@
+
+<svg width="1280" height="720" viewBox="0 0 960 540" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        /* Animate the monster's hand to wave */
+        .hand {
+            animation: wave 2s infinite ease-in-out alternate;
+            transform-origin: bottom center;
+        }
+        @keyframes wave {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(20deg); }
+        }
+
+        /* Animate the water to move up and down slowly */
+        .water {
+            animation: moveWater 5s infinite linear;
+        }
+        @keyframes moveWater {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(5px); }
+        }
+
+        /* Animate the building to sway gently */
+        .building {
+            animation: sway 4s infinite ease-in-out alternate;
+            transform-origin: bottom center;
+        }
+        @keyframes sway {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(2deg); }
+        }
+    </style>
+    <!-- Example structure for the SVG -->
+    <!-- Replace these placeholder elements with the actual SVG content and apply the classes as needed -->
+    <g class="hand" transform="translate(100, 100)">
+        <path d="M 100 100 L 150 50 L 200 100 Z" fill="#ffcc00" />
+    </g>
+    <g class="water" transform="translate(0, 400)">
+        <path d="M 0 400 Q 50 380 100 400 T 200 400 T 300 400 T 400 400 T 500 400" fill="#00ccff" />
+    </g>
+    <g class="building" transform="translate(300, 200)">
+        <rect x="0" y="0" width="100" height="200" fill="#999999" />
+    </g>
+</svg>

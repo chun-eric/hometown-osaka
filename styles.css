@@ -61,7 +61,7 @@ nav {
   border: 3px solid #222;
   padding: 10px;
   border-radius: 50%;
-  transition: all 0.1s ease;
+  transition: all 0.4s ease-in-out;
 }
 .nav-logo img {
   height: 40px;
@@ -69,7 +69,7 @@ nav {
 }
 
 .nav-logo:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 nav ul {
@@ -175,7 +175,6 @@ nav li a:hover {
     position: absolute;
     text-align: center;
     left: 50%;
-    transform: translateX(-50%);
   }
 
   .nav-logo img {
@@ -220,7 +219,7 @@ nav li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("./images/osaka-hero2.png");
+  background-image: url("./images/osaka-hero3.svg");
   background-size: cover;
   background-position: center;
   z-index: 1;
@@ -237,7 +236,7 @@ nav li a:hover {
 
 .hero-text {
   position: absolute;
-  top: -25%; /* Adjust this value to move the text up or down */
+  top: -20%; /* Adjust this value to move the text up or down */
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -245,7 +244,7 @@ nav li a:hover {
 }
 
 .hero .hero-heading {
-  font-size: 14vw; /* Adjusted for better scaling */
+  font-size: 12vw; /* Adjusted for better scaling */
   text-transform: uppercase;
   text-align: center;
   font-family: "Fraunces", serif;
@@ -280,11 +279,11 @@ nav li a:hover {
 
 @media (max-width: 768px) {
   .hero-text {
-    top: -28%; /* Adjustment for smaller screens */
+    top: -35%; /* Adjustment for smaller screens */
   }
 
   .hero .hero-heading {
-    font-size: 13vw;
+    font-size: 15vw;
   }
 
   .hero h3 {
@@ -332,33 +331,42 @@ h2 {
 
 .card {
   border: 1px solid black;
-  border-radius: 12px;
-  position: relative;
-  width: 350px;
-  height: 600px;
-  display: flex;
-  flex-direction: column;
-}
-
-.card {
   width: 300px;
   height: 500px;
+  border-radius: 12px;
+  box-shadow: 3px 3px 1px black;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 7px 6px 1px var(--teal);
+}
+
+.card:hover .card-bg {
+  transform: scale(1.2) rotate(3deg);
+}
+
+.card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s ease;
+}
+
+.card-1 {
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0)
     ),
     url("./images/osaka-castle.png");
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-  box-shadow: 3px 3px 1px black;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.card:hover {
-  box-shadow: 7px 6px 1px var(--teal);
 }
 
 .card-2 {
@@ -534,6 +542,8 @@ input {
   height: 60px;
   font-size: 18px;
   border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
   border: none;
   padding-left: 13px;
   display: inline-block;
@@ -545,7 +555,7 @@ input:focus {
 }
 
 #subsribe {
-  flex: 0 0 auto; /* allows input to grow and take up available space */
+  flex: 0 0 auto; /* wont grow and shrink and default basis size  will be auto  */
   min-width: 140px; /**/
   height: 60px;
   font-size: 18px;
@@ -636,7 +646,7 @@ footer {
   height: 100px;
   padding-top: 56%;
   /* 16:9 aspect ratio */
-  background-image: url("./images/footer-bg2.png");
+  background-image: url("./images/footer-bg4.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
