@@ -150,10 +150,11 @@ nav li a:hover {
   /* Mobile Navbar */
   #mobile-navbar {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    flex-direction: row;
+    flex-direction: column;
     font-family: "Nunito Sans", sans-serif;
     width: 100%;
     height: 100px;
@@ -202,6 +203,158 @@ nav li a:hover {
     flex-direction: column;
     align-items: center;
   }
+}
+
+/* Mobile Menu Overlay */
+#mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 21, 24, 0.45);
+  z-index: 1999 !important;
+  transition: opacity 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+}
+
+#mobile-menu-overlay.active {
+  opacity: 1;
+}
+
+/* Aside menu */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  color: #222;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: left 0.3s ease-in-out;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 2000 !important;
+}
+
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  gap: 30px;
+  align-items: start;
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-container .close-icon {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  color: #222;
+}
+.sidebar-container nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: start;
+  align-items: start;
+}
+
+.sidebar-container .sidebar-nav-logo {
+  text-align: center;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar-nav-logo img {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.sidebar-nav-logo img:hover {
+  transform: scale(1.1);
+}
+
+.sidebar-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: start;
+  align-items: start;
+}
+
+.sidebar-nav-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+  width: 100%;
+  padding-left: 20px;
+}
+
+.sidebar-nav-buttons .btn-secondary-side-bar,
+.sidebar-nav-buttons .btn-primary-side-bar {
+  width: 75% !important;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-size: 18px;
+  padding: 15px 25px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary-side-bar {
+  color: #222;
+}
+
+.btn-secondary-side-bar:hover {
+  color: var(--lightred);
+}
+
+.btn-primary-side-bar {
+  background-color: var(--teal);
+  color: white;
+}
+
+.btn-primary-side-bar:hover {
+  background-color: var(--lightred);
+}
+
+.sidebar-nav-buttons .btn-secondary-side-bar,
+.sidebar-nav-buttons .btn-primary-side-bar li {
+  list-style: none;
+}
+
+.sidebar-nav-buttons .btn-primary-side-bar li a:link,
+.sidebar-nav-buttons .btn-secondary-side-bar li a:visited,
+.sidebar-nav-buttons .btn-primary-side-bar li a:visited {
+  color: white;
+}
+
+.sidebar-nav-buttons .btn-secondary-side-bar li a:visited {
+  color: #222;
+}
+
+.sidebar-nav-buttons .btn-secondary-side-bar li a:hover {
+  color: var(--lightred);
+  transition: 0.2s ease-in;
 }
 
 /* Hero section */
@@ -639,6 +792,7 @@ footer {
   background-color: rgb(255, 255, 232);
   border-radius: 12px;
   position: relative;
+  z-index: 1;
 }
 
 .footer-image {

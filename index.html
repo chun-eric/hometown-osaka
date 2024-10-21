@@ -38,156 +38,174 @@
     />
   </head>
   <body>
-    <!-- navbar -->
-    <div id="navbar">
-      <nav>
-        <div class="nav-logo">
-          <img src="./images/logo.svg" alt="logo" />
-        </div>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="attractions.html">Attractions</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-        <div class="nav-buttons">
-          <button class="btn btn-secondary">Sign Up</button>
-          <button class="btn btn-primary">Sign In</button>
-        </div>
-      </nav>
-    </div>
+    <!-- side menu -->
+    <!-- <button id="sidebar-toggle" aria-expanded="false" aria-controls="sidebar">
+      Toggle Menu
+    </button> -->
 
-    <!-- mobile navbar -->
-    <header id="mobile-navbar">
-      <div class="mobile-navbar-content">
-        <div class="mobile-menu-btn">
-          <a href="#">
-            <img
-              class="menu-icon"
-              src="./images/icons/hamburger-icon.svg"
-              alt=""
-            />
-          </a>
-        </div>
-        <div class="nav-logo">
-          <a href="#">
+    <div id="mobile-menu-overlay"></div>
+
+    <div id="sidebar" aria-label="Main Navigation">
+      <div class="sidebar-container">
+        <div class="close-icon">X</div>
+        <nav>
+          <div class="sidebar-nav-logo">
             <img src="./images/nav-logo.png" alt="logo" />
-          </a>
-        </div>
-      </div>
-    </header>
-
-    <!-- hamburger menu -->
-    <!-- <div id="side-menu">
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="attractions.html">Attractions</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-        <div class="nav-logo">
-          <img src="./images/nav-logo.png" alt="logo" />
-        </div>
-      </nav>
-    </div> -->
-
-    <!-- hero -->
-    <div class="hero">
-      <div class="hero-background"></div>
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1 class="hero-heading">Osaka.</h1>
-          <h3>The City that's Fun<em>!</em></h3>
+          </div>
+          <ul class="sidebar-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="attractions.html">Attractions</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+        <div class="sidebar-nav-buttons">
+          <button class="btn btn-secondary-side-bar">
+            <li><a href="">Sign Up</a></li>
+          </button>
+          <button class="btn btn-primary-side-bar">
+            <li><a href="">Sign In</a></li>
+          </button>
         </div>
       </div>
     </div>
 
-    <!-- featured cards -->
-    <div class="featured-cards">
-      <h2>Top Activities in Osaka</h2>
-      <div class="cards">
-        <div class="card">
-          <div class="card-bg card-1"></div>
-          <h4>Attractions</h4>
-          <!-- <p>Osaka Castle</p> -->
-          <!-- <div class="card-details">
-              <p>Osaka Castle</p>
-              <p class="card-description"></p>
-            </div> -->
-          <span class="material-symbols-outlined"> arrow_forward_ios </span>
-        </div>
-        <div class="card">
-          <div class="card-bg card-2"></div>
-          <h4>Eating</h4>
-          <!-- <p>Takoyaki</p> -->
-          <!-- <div class="card-details">
-              <p>Osaka Castle</p>
-              <p class="card-description"></p>
-            </div> -->
-          <span class="material-symbols-outlined"> arrow_forward_ios </span>
-        </div>
-        <div class="card">
-          <div class="card-bg card-3"></div>
-          <h4>Shopping</h4>
-          <!-- <p>Osaka Castle</p> -->
-          <!-- <div class="card-details">
-              <p>Osaka Castle</p>
-              <p class="card-description"></p>
-            </div> -->
-          <span class="material-symbols-outlined"> arrow_forward_ios </span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Travel Guide -->
-    <div class="guide">
-      <div class="guide-container">
-        <div class="guide-image"></div>
-        <div class="guide-text">
-          <div class="text">
-            <h3>Meet Your Travel Guide</h3>
-            <p>
-              Konnichiwa! I'm <strong>Shinji-kun</strong>, your friendly Osaka
-              guide. Are you ready to unlock the Osaka's hidden gems and
-              must-see spots? From delicious street food to amazing attractions,
-              I'll guide you through the best of what Osaka has to offer.
-              Subscribe to our email to get more amazing tips!
-            </p>
+    <main>
+      <!-- navbar -->
+      <div id="navbar">
+        <nav>
+          <div class="nav-logo">
+            <img src="./images/logo.svg" alt="logo" />
           </div>
-          <div class="email">
-            <input type="email" placeholder="Enter your email" />
-            <button type="submit" id="subsribe">Subscribe</button>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="attractions.html">Attractions</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+          <div class="nav-buttons">
+            <button class="btn btn-secondary">Sign Up</button>
+            <button class="btn btn-primary">Sign In</button>
+          </div>
+        </nav>
+      </div>
+
+      <!-- mobile navbar -->
+      <header id="mobile-navbar">
+        <div class="mobile-navbar-content">
+          <div class="mobile-menu-btn">
+            <a href="#">
+              <img
+                class="menu-icon"
+                src="./images/icons/hamburger-icon.svg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="nav-logo">
+            <a href="#">
+              <img src="./images/nav-logo.png" alt="logo" />
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- hero -->
+      <div class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-heading">Osaka.</h1>
+            <h3>The City that's Fun<em>!</em></h3>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Footer -->
-    <footer>
-      <div class="footer-content">
-        <div class="footer-upper">
-          <div class="footer-links">
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="index.html">Attractions</a></li>
-              <li><a href="index.html">Events</a></li>
-              <li><a href="index.html">About</a></li>
-            </ul>
+      <!-- featured cards -->
+      <div class="featured-cards">
+        <h2>Top Activities in Osaka</h2>
+        <div class="cards">
+          <div class="card">
+            <div class="card-bg card-1"></div>
+            <h4>Attractions</h4>
+            <!-- <p>Osaka Castle</p> -->
+            <!-- <div class="card-details">
+              <p>Osaka Castle</p>
+              <p class="card-description"></p>
+            </div> -->
+            <span class="material-symbols-outlined"> arrow_forward_ios </span>
           </div>
-          <div class="footer-text">
-            <p>Copyright © 2024 Osaka Hometown. <br />All rights reserved.</p>
+          <div class="card">
+            <div class="card-bg card-2"></div>
+            <h4>Eating</h4>
+            <!-- <p>Takoyaki</p> -->
+            <!-- <div class="card-details">
+              <p>Osaka Castle</p>
+              <p class="card-description"></p>
+            </div> -->
+            <span class="material-symbols-outlined"> arrow_forward_ios </span>
           </div>
-          <div class="footer-icons">
-            <img src="./images/icons/facebook.svg" alt="" />
-            <img src="./images/icons/twitter.svg" alt="" />
-            <img src="./images/icons/linkedin.svg" alt="" />
+          <div class="card">
+            <div class="card-bg card-3"></div>
+            <h4>Shopping</h4>
+            <!-- <p>Osaka Castle</p> -->
+            <!-- <div class="card-details">
+              <p>Osaka Castle</p>
+              <p class="card-description"></p>
+            </div> -->
+            <span class="material-symbols-outlined"> arrow_forward_ios </span>
           </div>
         </div>
       </div>
-      <div class="footer-image" loading="lazy"></div>
-    </footer>
 
+      <!-- Travel Guide -->
+      <div class="guide">
+        <div class="guide-container">
+          <div class="guide-image"></div>
+          <div class="guide-text">
+            <div class="text">
+              <h3>Meet Your Travel Guide</h3>
+              <p>
+                Konnichiwa! I'm <strong>Shinji-kun</strong>, your friendly Osaka
+                guide. Are you ready to unlock the Osaka's hidden gems and
+                must-see spots? From delicious street food to amazing
+                attractions, I'll guide you through the best of what Osaka has
+                to offer. Subscribe to our email to get more amazing tips!
+              </p>
+            </div>
+            <div class="email">
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit" id="subsribe">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-content">
+          <div class="footer-upper">
+            <div class="footer-links">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Attractions</a></li>
+                <li><a href="index.html">Events</a></li>
+                <li><a href="index.html">About</a></li>
+              </ul>
+            </div>
+            <div class="footer-text">
+              <p>Copyright © 2024 Osaka Hometown. <br />All rights reserved.</p>
+            </div>
+            <div class="footer-icons">
+              <img src="./images/icons/facebook.svg" alt="" />
+              <img src="./images/icons/twitter.svg" alt="" />
+              <img src="./images/icons/linkedin.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="footer-image" loading="lazy"></div>
+      </footer>
+    </main>
     <script src="script.js" defer></script>
   </body>
 </html>
