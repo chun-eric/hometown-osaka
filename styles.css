@@ -380,6 +380,272 @@ nav li a:hover {
   color: #0066ff;
 }
 
+/* Sign Up Modal */
+#modal-signup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100% !important;
+  background-color: rgba(65, 66, 66, 0.45);
+  z-index: 2002 !important;
+  opacity: 1; /* start with 0 opacity */
+  transition: opacity 0.3s, visibility 0.3s ease;
+  /* visibility: hidden; */
+}
+
+#modal-signup.show {
+  visibility: visible; /* fades in */
+  opacity: 1;
+  /* show when active */
+}
+
+#modal-signup .overlay-content {
+  z-index: 2003 !important;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  height: fit-content;
+  background-color: #ffffff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 10px;
+  border-radius: 15px;
+}
+
+#modal-signup .overlay-content .close-icon {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  background: none;
+  font-size: 30px;
+  color: #3b3b3b;
+  border: none;
+  cursor: pointer;
+  padding: 2px 8px;
+  transition: background-color all 0.4s ease;
+}
+
+#modal-signup .overlay-content .close-icon:hover {
+  background-color: #f7f7f7;
+  border-radius: 8px;
+}
+
+.overlay-content .upper-section {
+  padding: 32px 24px 24px;
+}
+
+#modal-signup .overlay-content h2 {
+  font-family: "Inter", sans-serif;
+  line-height: 1.1rem;
+  font-size: 30px;
+  font-variation-settings: "wght" 900;
+  letter-spacing: -0.045em;
+  padding-bottom: 25px !important;
+}
+
+#modal-signup .overlay-content .overlay-text {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #7d7c83;
+  line-height: 1.4em;
+  font-variation-settings: "wght" 400;
+  margin-bottom: 5px;
+}
+
+#modal-signup .overlay-content .lower-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  padding: 5px 24px 24px;
+  width: 90%;
+}
+
+#modal-signup .overlay-content .lower-section .auth-button {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-style: normal;
+  background-color: #f2f2f3;
+  color: #000000;
+  font-weight: bold;
+  font-variation-settings: "wght" 600;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 20px;
+  margin-bottom: 7px;
+  position: relative;
+}
+
+.google-button,
+.apple-button {
+  justify-content: center;
+}
+
+.auth-button img {
+  position: absolute;
+  left: 15px;
+  width: 20px;
+  height: 20px;
+}
+
+#modal-signup .overlay-content .lower-section .auth-button:hover {
+  background-color: #e9e9e9;
+}
+
+#modal-signup .overlay-content .lower-section .email-button {
+  text-align: center !important;
+  margin: 0 auto;
+  background-color: #0066ff;
+  color: #ffffff;
+}
+
+#modal-signup .overlay-content .lower-section .email-button:hover {
+  background-color: #015ad6;
+}
+
+#modal-signup .overlay-content .lower-section .small-text {
+  display: flex;
+  align-items: flex-start;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  color: #7d7c83;
+  line-height: 1.6em;
+  margin-top: 20px;
+  font-variation-settings: "wght" 400;
+}
+
+#modal-signin .overlay-content .lower-section .small-text label {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+#modal-signup
+  .overlay-content
+  .lower-section
+  .small-text
+  input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  margin: 0;
+  margin-right: 5px !important; /* gives some space to the right */
+  vertical-align: middle; /* aligns the text vertically in the middle */
+}
+
+#modal-signin .overlay-content .lower-section .small-text span {
+  /* Add proper spacing between words */
+  word-spacing: 3px;
+  line-height: 1.2;
+  display: inline-block;
+  top: 2px;
+  vertical-align: middle;
+}
+
+#modal-signup .overlay-content .lower-section .small-text a {
+  color: #000000;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+#modal-signup .overlay-content .lower-section .small-text a:hover {
+  color: #0066ff;
+}
+
+#modal-signup .overlay-content .separator {
+  width: 80%;
+  height: 1px;
+  background-color: #e4e4e4;
+  margin: 5px 0;
+}
+
+#modal-signup .login-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 15px 0px 20px;
+  width: 80%;
+  text-align: left;
+}
+
+#modal-signup .overlay-content .login-section p {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  color: #000;
+  line-height: 1.2em;
+  font-variation-settings: "wght" 600;
+  text-align: left !important;
+  display: inline-block;
+  display: flex;
+  align-items: left;
+}
+
+#modal-signup .login-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+#modal-signup .logo-login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  gap: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+#modal-signup .logo-login-btn .logo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#modal-signup .logo-login-btn .logo-box div {
+  padding: 10px 20px;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+}
+
+#modal-signup .logo-login-btn .logo-box div:hover {
+  background-color: ;
+}
+
+#modal-signup .logo-login-btn .logo-box img {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#modal-signup .logo-login-btn .logo-box p {
+  font-family: "Arial", sans-serif;
+  font-size: 10px;
+  color: #b3b2b2;
+  line-height: 1.2em;
+  font-variation-settings: "wght" 400;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+}
+
 /* Aside menu */
 #sidebar {
   position: fixed;

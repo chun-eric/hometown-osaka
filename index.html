@@ -53,6 +53,7 @@
 
     <div id="overlay"></div>
 
+    <!-- sign in modal-->
     <div id="modal-signin">
       <div class="overlay-content">
         <button class="close-icon">×</button>
@@ -81,13 +82,14 @@
       </div>
     </div>
 
+    <!-- sign up modal-->
     <div id="modal-signup">
       <div class="overlay-content">
         <button class="close-icon">×</button>
         <div class="upper-section">
-          <h2>Welcome Back!</h2>
+          <h2>Hello!</h2>
           <div class="overlay-text">
-            Use your email or another service to continue your journey.
+            Let's create an account to continue your journey.
           </div>
         </div>
         <div class="lower-section">
@@ -101,9 +103,51 @@
           </button>
           <button class="auth-button email-button">Continue with email</button>
           <div class="small-text">
-            By continuing, you agree to our <a href="">Terms of Service.</a>
-            <br />
-            Read our <a href="">Privacy Policy.</a>
+            <label>
+              <input type="checkbox" name="terms" id="terms" />
+              <span
+                >I accept the <a href="">Terms of Service</a> and
+                <a href="">Privacy Policy.</a>
+              </span>
+            </label>
+          </div>
+        </div>
+        <div class="separator"></div>
+        <div class="login-section">
+          <p>Or log in using your account:</p>
+          <div class="login-container">
+            <div class="logo-login-btn">
+              <div class="logo-box">
+                <div>
+                  <img src="./images/icons/google.svg" alt="" />
+                </div>
+                <p>Google</p>
+              </div>
+            </div>
+            <div class="logo-login-btn">
+              <div class="logo-box">
+                <div>
+                  <img src="./images/icons/apple.svg" alt="" />
+                </div>
+                <p>Apple</p>
+              </div>
+            </div>
+            <div class="logo-login-btn">
+              <div class="logo-box">
+                <div>
+                  <img src="./images/icons/linkedin.svg" alt="" />
+                </div>
+                <p>LinkedIn</p>
+              </div>
+            </div>
+            <div class="logo-login-btn">
+              <div class="logo-box">
+                <div>
+                  <img src="./images/icons/facebook.svg" alt="" />
+                </div>
+                <p>Facebook</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
