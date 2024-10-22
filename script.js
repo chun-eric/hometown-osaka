@@ -26,3 +26,8 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && sidebar.classList.contains("show-sidebar"))
     toggleSidebar(false);
 });
+
+/* display signup form when clicked on larger devices */
+/* display signin form when clicked on larger devices */
+/* exit on clicking overlay or clicking on close button top left
+ */

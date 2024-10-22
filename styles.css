@@ -24,6 +24,7 @@ body {
   font-size: 20px;
   min-height: 100vh;
   /* border: 1px solid black; */
+  position: relative;
 }
 
 .container {
@@ -42,7 +43,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 1rem 0rem;
+  padding: 1rem 0rem 0.5rem;
   border-bottom: 1px solid #c5c5c5;
 }
 
@@ -111,6 +112,7 @@ nav li a:hover {
 .btn-primary {
   background-color: var(--teal);
   color: #fff;
+  margin-left: 10px;
 }
 
 .btn-primary:hover {
@@ -120,6 +122,8 @@ nav li a:hover {
 .btn-secondary {
   background-color: transparent;
   transition: all 0.3s ease;
+  border-radius: 0px;
+  border-right: 1px solid #c5c5c5;
 }
 
 .btn-secondary:hover {
@@ -150,7 +154,6 @@ nav li a:hover {
   /* Mobile Navbar */
   #mobile-navbar {
     display: flex;
-
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
@@ -223,6 +226,151 @@ nav li a:hover {
   background-color: rgba(17, 21, 24, 0.45);
   z-index: 1999 !important;
   transition: opacity 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+}
+
+/* Sign Up form */
+#modal-signin {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100% !important;
+  background-color: rgba(65, 66, 66, 0.45);
+  z-index: 2002 !important;
+  transition: opacity 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+}
+
+#modal-signin .overlay-content {
+  z-index: 2003 !important;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  height: fit-content;
+  background-color: #ffffff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 10px;
+  border-radius: 15px;
+}
+
+#modal-signin .overlay-content .close-icon {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  background: none;
+  font-size: 30px;
+  color: #3b3b3b;
+  border: none;
+  cursor: pointer;
+  padding: 2px 8px;
+  transition: background-color all 0.4s ease;
+}
+
+#modal-signin .overlay-content .close-icon:hover {
+  background-color: #f7f7f7;
+  border-radius: 8px;
+}
+
+.overlay-content .upper-section {
+  padding: 32px 24px 24px;
+}
+
+#modal-signin .overlay-content h2 {
+  font-family: "Inter", sans-serif;
+  line-height: 1.1rem;
+  font-size: 30px;
+  font-variation-settings: "wght" 900;
+  letter-spacing: -0.045em;
+  padding-bottom: 25px !important;
+}
+
+#modal-signin .overlay-content .overlay-text {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #7d7c83;
+  line-height: 1.4em;
+  font-variation-settings: "wght" 400;
+  margin-bottom: 5px;
+}
+
+#modal-signin .overlay-content .lower-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  padding: 5px 24px 24px;
+}
+
+#modal-signin .overlay-content .lower-section .auth-button {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-style: normal;
+  background-color: #f2f2f3;
+  color: #000000;
+  font-weight: bold;
+  font-variation-settings: "wght" 600;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 20px;
+  margin-bottom: 7px;
+  position: relative;
+}
+
+.google-button,
+.apple-button {
+  justify-content: center;
+}
+
+.auth-button img {
+  position: absolute;
+  left: 15px;
+  width: 20px;
+  height: 20px;
+}
+
+#modal-signin .overlay-content .lower-section .auth-button:hover {
+  background-color: #e9e9e9;
+}
+
+#modal-signin .overlay-content .lower-section .email-button {
+  text-align: center !important;
+  margin: 0 auto;
+  background-color: #0066ff;
+  color: #ffffff;
+}
+
+#modal-signin .overlay-content .lower-section .email-button:hover {
+  background-color: #015ad6;
+}
+
+#modal-signin .overlay-content .lower-section .small-text {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  color: #7d7c83;
+  line-height: 1.6em;
+  margin-top: 20px;
+  font-variation-settings: "wght" 400;
+}
+
+#modal-signin .overlay-content .lower-section .small-text a {
+  color: #000000;
+  font-weight: 800;
+}
+
+#modal-signin .overlay-content .lower-section .small-text a:hover {
+  color: #0066ff;
 }
 
 /* Aside menu */
@@ -311,6 +459,8 @@ nav li a:hover {
   align-items: start;
   width: 100%;
   padding-left: 20px;
+  border-top: 1px solid #d3d3d3;
+  padding-top: 30px;
 }
 
 .sidebar-nav-buttons .btn-secondary-side-bar,
@@ -360,7 +510,7 @@ nav li a:hover {
 
 .sidebar-nav-buttons .btn-secondary-side-bar li a:hover {
   color: var(--lightred);
-  transition: 0.2s ease-in;
+  transition: 0.1s ease-in;
 }
 
 /* Hero section */

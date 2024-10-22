@@ -36,6 +36,14 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
     <!-- side menu -->
@@ -45,6 +53,35 @@
 
     <div id="overlay"></div>
 
+    <div id="modal-signin">
+      <div class="overlay-content">
+        <button class="close-icon">×</button>
+        <div class="upper-section">
+          <h2>Welcome Back!</h2>
+          <div class="overlay-text">
+            Use your email or another service to continue your journey.
+          </div>
+        </div>
+        <div class="lower-section">
+          <button class="auth-button google-button">
+            <img src="./images/icons/google.svg" alt="Google icon" />
+            Continue with Google
+          </button>
+          <button class="auth-button apple-button">
+            <img src="./images/icons/apple.svg" alt="Apple icon" />
+            Continue with Apple
+          </button>
+          <button class="auth-button email-button">Continue with email</button>
+          <div class="small-text">
+            By continuing, you agree to our <a href="">Terms of Service.</a>
+            <br />
+            Read our <a href="">Privacy Policy.</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- side menu -->
     <div id="sidebar" aria-label="Main Navigation">
       <div class="sidebar-container">
         <div id="close-btn" class="close-icon">X</div>
