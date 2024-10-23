@@ -391,9 +391,9 @@ nav li a:hover {
   height: 100% !important;
   background-color: rgba(65, 66, 66, 0.45);
   z-index: 2002 !important;
-  opacity: 1; /* start with 0 opacity */
+  opacity: 0; /* start with 0 opacity */
   transition: opacity 0.3s, visibility 0.3s ease;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 
 #modal-signup.show {
@@ -409,7 +409,6 @@ nav li a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 400px;
   height: fit-content;
   background-color: #ffffff;
   top: 50%;
@@ -417,6 +416,8 @@ nav li a:hover {
   transform: translate(-50%, -50%);
   padding: 10px 10px;
   border-radius: 15px;
+  max-width: 400px;
+  width: 95%; /* sets default width percentage*/
 }
 
 #modal-signup .overlay-content .close-icon {
@@ -465,7 +466,7 @@ nav li a:hover {
   justify-content: center;
   gap: 7px;
   padding: 5px 24px 24px;
-  width: 90%;
+  width: 100%; /* takes full width of parent */
 }
 
 #modal-signup .overlay-content .lower-section .auth-button {
@@ -519,18 +520,18 @@ nav li a:hover {
 #modal-signup .overlay-content .lower-section .small-text {
   display: flex;
   align-items: flex-start;
+  text-align: left;
   font-family: "Inter", sans-serif;
   font-size: 10px;
   color: #7d7c83;
-  line-height: 1.6em;
-  margin-top: 20px;
+
+  margin-top: 10px;
   font-variation-settings: "wght" 400;
 }
 
 #modal-signin .overlay-content .lower-section .small-text label {
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
+  display: inline-flex;
+  align-items: flex-start;
 }
 
 #modal-signup
@@ -548,10 +549,9 @@ nav li a:hover {
 
 #modal-signin .overlay-content .lower-section .small-text span {
   /* Add proper spacing between words */
-  word-spacing: 3px;
-  line-height: 1.2;
-  display: inline-block;
-  top: 2px;
+  display: inline;
+  word-spacing: normal;
+  white-space: normal; /* Allow natural text wrapping */
   vertical-align: middle;
 }
 
@@ -591,15 +591,17 @@ nav li a:hover {
   display: inline-block;
   display: flex;
   align-items: left;
+  margin-top: 10px;
 }
 
 #modal-signup .login-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   gap: 10px;
   align-items: center;
   width: 100%;
 }
+
 #modal-signup .logo-login-btn {
   display: flex;
   align-items: center;
@@ -624,7 +626,7 @@ nav li a:hover {
 }
 
 #modal-signup .logo-login-btn .logo-box div:hover {
-  background-color: ;
+  background-color: #ebebeb;
 }
 
 #modal-signup .logo-login-btn .logo-box img {
@@ -643,7 +645,40 @@ nav li a:hover {
   font-variation-settings: "wght" 400;
   align-items: center;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
+}
+
+/* media queries  */
+@media screen and (max-width: 670px) {
+  #modal-signup .overlay-content {
+    width: 100%; /* Take up 90% of viewport width */
+    margin: 0 auto;
+  }
+  #modal-signup .overlay-content .lower-section .auth-button {
+    width: 100%;
+  }
+
+  #modal-signup .overlay-content .lower-section .small-text {
+    width: 100%;
+    gap: 4px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  #modal-signup .login-container {
+    text-align: center;
+  }
+
+  #modal-signup .logo-login-btn .logo-box div {
+    padding: 8px 14px !important;
+  }
+  #modal-signup .logo-login-btn .logo-box p {
+    display: none;
+  }
+  #modal-signup .logo-login-btn .logo-box img {
+    width: 20px !important;
+    height: 20px !important;
+  }
 }
 
 /* Aside menu */
