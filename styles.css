@@ -264,6 +264,7 @@ nav li a:hover {
   transform: translate(-50%, -50%);
   padding: 10px 10px;
   border-radius: 15px;
+  width: 100%;
 }
 
 #modal-signin .overlay-content .close-icon {
@@ -983,7 +984,7 @@ h2 {
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0)
     ),
-    url("./images/osaka-castle.png");
+    url("./images/osaka-castle2.png");
 }
 
 .card-2 {
@@ -992,7 +993,7 @@ h2 {
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0)
     ),
-    url("./images/takoyaki.png");
+    url("./images/takoyaki-2.png");
 }
 
 .card-3 {
@@ -1001,7 +1002,7 @@ h2 {
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0)
     ),
-    url("./images/namba-1.png");
+    url("./images/namba-2.png");
 }
 
 .card h4 {
