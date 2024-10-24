@@ -106,8 +106,102 @@ document.addEventListener("keydown", (e) => {
 
 console.log(document.activeElement);
 /* Weird bugs
-1. When pressing escape key the sign up or sign in buttons have a black border around them -
+1. When pressing escape key the sign up or sign in buttons have a black border around them 
+
+Bug fix
 Solution:   document.activeElement.blur();
 document.activeElement = Which element currently focused
 blur() = removes any focus outline from focused element, opposite of focus()
 */
+
+/* Featured Cards Slider 
+
+ 1. Click on arrow button event listenter
+ 2. Aarrow changes into a x sign with rotate animation
+ 3. The card details slides down. 
+ 4. click on X sign event listener
+ 5. Card details slides up smoothly
+
+*/
+
+/* Elements */
+const cards = document.querySelectorAll(".card");
+console.log(cards);
+
+cards.forEach((card) => {
+  // find the arrow or close icons within each card
+  const arrowIcon = card.querySelector(".arrow");
+  const closeIcon = card.querySelector(".close");
+  let closeCardTimeOut;
+
+  // Error handling for missing icons
+  if (!arrowIcon || !closeIcon) {
+    console.error("Arrow or close icon not found");
+    return;
+  }
+
+  // function to close the card
+  function closeCard() {
+    // remove the expanded class
+    card.classList.remove("expanded");
+    // clear the closeCardTimeOut
+    if (closeCardTimeOut) {
+      // clear the closeCardTimeOut function
+      clearTimeout(closeCardTimeOut);
+      // set closeCardTimeout to null
+      closeCardTimeOut = null; // clears timer back to zero
+    }
+  }
+
+  // function to toggle the card
+  function toggleCard(expanding) {
+    if (expanding) {
+      card.classList.add("expanded");
+      // setTimeOut to close after 40 seconds
+      closeCardTimeOut = setTimeout(() => {
+        closeCard();
+      }, 40000);
+    } else {
+      closeCard();
+    }
+  }
+
+  // Add click event listener to the card
+  arrowIcon.addEventListener("click", () => {
+    toggleCard(true);
+  });
+
+  closeIcon.addEventListener("click", () => {
+    toggleCard(false);
+  });
+
+  // Add keybaord accesssibility for card click events
+  arrowIcon.addEventListener("keydown", (e) => {
+    // if enter or space key is pressed
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault(); // prevent the browser from continuing to scroll
+      toggleCard(true);
+    }
+  });
+
+  closeIcon.addEventListener("keydown", (e) => {
+    // if enter or space key is pressed
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault(); // prevent the browser from continuing to scroll
+      toggleCard(false);
+    }
+  });
+
+  // ARIA Attributes for screen readers
+  // saying to screen readers that the card is not expanded
+  card.setAttribute("aria-expanded", "false");
+
+  // telling screen readers this is a button
+  arrowIcon.setAttribute("role", "button");
+  closeIcon.setAttribute("role", "button");
+
+  // telling screen readers to focus on the arrow icon
+  // value of 0 means screen reader can tab key to this item
+  arrowIcon.setAttribute("tabindex", "0");
+  closeIcon.setAttribute("tabindex", "0");
+});

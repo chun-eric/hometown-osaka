@@ -945,6 +945,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
+  /* overflow: hidden; */
 }
 
 .card {
@@ -961,6 +962,7 @@ h2 {
 
 .card:hover {
   box-shadow: 7px 6px 1px var(--teal);
+  border-radius: 12px;
 }
 
 .card:hover .card-bg {
@@ -976,6 +978,7 @@ h2 {
   background-size: cover;
   background-position: center;
   transition: all 0.5s ease;
+  z-index: 1;
 }
 
 .card-1 {
@@ -1014,30 +1017,84 @@ h2 {
   text-align: center;
   color: #fff;
   text-shadow: 2px 2px 0px black;
+  z-index: 2;
 }
 
 .card-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   border-radius: 12px;
-  height: 40%;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  text-align: left;
   justify-content: center;
   background-color: #fff;
+  transform: translateY(-102%); /* hide initially */
+  transition: transform 0.5s ease;
+  z-index: 2;
 }
 
-.card-details p {
-  font-size: 20px;
-  text-align: left;
-  padding-left: 20px;
-  font-family: "Nunito Sans", sans-serif;
+.card.expanded .card-details {
+  transform: translateY(0); /* show card. Slides down.*/
+}
+
+.details-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 50%;
+  padding: 20px;
+  padding-top: 30px;
+}
+
+.details-content .card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "Fraunces", sans-serif;
   color: #222;
 }
 
-.material-symbols-outlined {
-  font-size: 30px;
-  position: absolute;
+.card-details .details-content .card-description {
+  font-size: 15px !important;
+  line-height: 1.4;
+}
+
+.card-image {
+  height: 50%;
+  object-fit: cover;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.icon-container {
+  position: absolute; /* positoned relative to the card div*/
   bottom: 20px;
   right: 20px;
+  width: 45px;
+  height: 45px;
+  z-index: 10; /* stays above all other card elements*/
+}
+
+.material-symbols-outlined {
+  position: absolute; /* both icons positioned absolutely within the icon container*/
+  top: 0;
+  left: 0;
+  width: 100%; /* takes up 100% width of the icon container*/
+  height: 100%; /* takes up 100% height of the icon container*/
+  /* both icons are stacked on top of each other taking up 100% width and height of the icon container*/
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   border: 1px solid #fff;
   background-color: var(--brownpurple);
@@ -1048,8 +1105,32 @@ h2 {
 }
 
 .material-symbols-outlined:hover {
-  border: 1px solid var(--teal);
-  background-color: var(--teal);
+  background-color: var(--teal) !important;
+  border-color: var(--teal) !important;
+}
+
+.material-symbols-outlined.arrow {
+  opacity: 1;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+  pointer-events: auto; /* the arrow icon can be clicked */
+}
+
+.material-symbols-outlined.close {
+  opacity: 0;
+  transform: rotate(-180deg);
+  pointer-events: none; /* when close icon is not visible cant be clicked */
+}
+
+.card.expanded .material-symbols-outlined.arrow {
+  opacity: 0;
+  transform: rotate(180deg);
+}
+
+.card.expanded .material-symbols-outlined.close {
+  opacity: 1;
+  transform: rotate(0deg);
+  pointer-events: auto; /* when close icon is visible can be clicked */
 }
 
 @media (max-width: 1200px) {
