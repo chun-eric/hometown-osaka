@@ -1029,6 +1029,7 @@ h2 {
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start; /**/
   gap: 10px;
   text-align: left;
   justify-content: center;
@@ -1046,7 +1047,8 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 50%;
+  height: auto; /**/
+  min-height: 50%; /**/
   padding: 20px;
   padding-top: 30px;
 }
@@ -1155,8 +1157,27 @@ h2 {
   .card {
     width: 90%;
     max-width: 600px;
-    height: 500px;
+    height: 400px;
     margin: 0 auto;
+  }
+
+  .details-content .card-title {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .card-details .details-content .card-description {
+    font-size: 18px !important;
+    line-height: 1.3;
+    overflow: hidden;
+  }
+
+  .card-details .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: stretch;
+    object-position: center;
+    background-repeat: no-repeat;
   }
 }
 
@@ -1166,15 +1187,57 @@ h2 {
   }
 
   h2 {
-    font-size: 28px;
+    font-size: 32px;
   }
 
-  .card {
-    height: 350px;
+  .card-details .details-content {
+    padding: 20px;
+    height: 100%;
+  }
+  .details-content .card-title {
+    font-size: 26px;
+    margin-bottom: 8px;
   }
 
-  .card h4 {
-    font-size: 28px;
+  .card-details .details-content .card-description {
+    font-size: 15px !important;
+    line-height: 1.3;
+    overflow: hidden;
+  }
+
+  .card-details .details-content .card-image {
+    max-height: 150px; /* Smaller minimum height for mobile */
+  }
+}
+
+@media (max-width: 350px) {
+  .featured-cards {
+    padding: 60px 0px !important;
+  }
+
+  .card-details {
+    gap: 5px !important;
+  }
+
+  .card-details .details-content {
+    padding-top: 30px;
+    padding-bottom: 10px !important;
+  }
+  .card-details .details-content .card-title {
+    font-size: 18px !important;
+  }
+
+  .card-details .details-content p.card-description {
+    text-overflow: ellipsis !important;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6; /* Show only 6 lines */
+    line-height: 1.3;
+    overflow: hidden; /* Hide any overflow */
+  }
+
+  .card-details .details-content .card-image {
+    height: auto; /* Smaller minimum height for mobile */
   }
 }
 
