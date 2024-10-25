@@ -930,22 +930,25 @@ nav li a:hover {
   align-items: center;
   justify-content: center;
   margin: 100px auto 80px;
-  gap: 30px;
-  width: 100%;
-  max-width: 1200px;
+  gap: 60px;
+  width: 90%;
+  max-width: 1600px;
+  padding: 0 20px;
   font-family: "Fraunces", serif;
+  text-align: center;
 }
 
 .description-image {
   flex: 1;
+  max-width: 50%; /* Adjust this value to control the width of the image */
 }
 
-.description-image .image-1,
-.description-image .image-2 {
+.description-image .image-1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
   background-position: center;
+  display: block;
 }
 
 .description-content {
@@ -954,18 +957,32 @@ nav li a:hover {
   justify-content: center;
   align-items: flex-start;
   flex: 1;
+  max-width: 50%;
   text-align: left;
+  padding-left: 30px;
 }
 
 .description-content h2 {
   font-size: 70px;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
-.description-content ul li {
+.description-content p {
+  margin-bottom: 12px;
+}
+
+.description-content ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+.description-content ul > li {
   list-style: none;
-  gap: 10px;
   display: flex;
+  align-items: center; /* vertical alignment */
+  margin-bottom: 12px;
 }
 .description-content ul li > img {
   width: 30px;
@@ -974,6 +991,16 @@ nav li a:hover {
   vertical-align: middle;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.description-content ul li > img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.description-content p:last-child {
+  font-size: 22px;
 }
 
 /* Wave divider */
