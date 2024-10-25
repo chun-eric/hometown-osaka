@@ -924,6 +924,86 @@ nav li a:hover {
   }
 }
 
+/* Description */
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px auto 80px;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  font-family: "Fraunces", serif;
+}
+
+.description-image {
+  position: relative;
+  display: flex;
+  flex: 1;
+}
+
+.description-image .image-1,
+.description-image .image-2 {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.description-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+  text-align: left;
+}
+
+.description-content h2 {
+  font-size: 70px;
+  text-transform: uppercase;
+}
+
+/* Wave divider */
+.wave-container {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.wave-line {
+  width: 800px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.wave-path.wave-2 {
+  stroke: var(--teal);
+  animation: moveWave 2s linear infinite;
+  animation-direction: reverse;
+}
+
+.wave-path {
+  stroke: #dd7a6f;
+  stroke-width: 2;
+  fill: none;
+  animation: moveWave 2s linear infinite;
+}
+
+@keyframes moveWave {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50px);
+  }
+}
 /* Featured Cards */
 .featured-cards {
   margin: 0 auto;
