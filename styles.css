@@ -88,6 +88,7 @@ nav li a {
   color: #222;
   text-decoration: none;
   transition: color 0.3s ease;
+  font-weight: bold;
 }
 
 nav li a:hover {
@@ -1016,7 +1017,7 @@ nav li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 100px auto 80px;
+  margin: 120px auto 80px;
   gap: 60px;
   width: 90%;
   max-width: 1600px;
@@ -1137,8 +1138,8 @@ nav li a:hover {
     text-align: center;
   }
 
-  .description-image {
-    max-width: 100%;
+  .description-image image-1 {
+    max-width: 85%;
     padding: 0 20px;
   }
 
@@ -1684,7 +1685,7 @@ footer {
   height: auto;
   color: #111;
   font-family: "Fraunces", sans-serif;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 18px;
   display: flex;
   flex-direction: column;
@@ -1736,10 +1737,15 @@ footer {
 .footer-links ul {
   list-style: none;
   text-align: left;
+
   display: flex;
   flex-direction: column;
   gap: 20px;
   font-family: "Fraunces", sans-serif;
+}
+
+.footer-links ul li {
+  font-weight: bold;
 }
 
 .footer-links ul li a {
@@ -1747,7 +1753,7 @@ footer {
   transition: all 0.3s ease;
   cursor: pointer;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .footer-links ul li a:hover {
@@ -1758,9 +1764,11 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 15px;
+  font-size: 14px;
   width: 100%;
   align-items: center;
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
 }
 
 .footer-icons {
