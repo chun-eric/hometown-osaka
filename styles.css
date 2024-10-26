@@ -880,9 +880,13 @@ nav li a:hover {
   font-weight: 600;
   letter-spacing: 2px;
   opacity: 0;
-  animation: fadeUp 60s infinite;
+  animation: fadeUp 40s infinite;
   animation-delay: 2.4s; /* matches when h1 animation finishes*/
   animation-timing-function: ease-out; /* object starts quickly and ends slowly*/
+}
+
+.hero h3 span {
+  color: var(--teal);
 }
 
 @keyframes fadeUp {
@@ -959,7 +963,7 @@ nav li a:hover {
 
 .bouncy-text span {
   display: inline-block;
-  animation: bounceIn 60s infinite;
+  animation: bounceIn 40s infinite;
 }
 
 /* Add delay for each span */
@@ -1085,6 +1089,36 @@ nav li a:hover {
   transform: scale(1.1);
   cursor: pointer;
   object-fit: contain;
+}
+
+.description-content ul li span {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: inherit;
+  text-underline-offset: 8px;
+  font-weight: bold;
+  margin-right: 5px;
+  color: var(--teal);
+}
+
+.description-content ul li > img {
+  animation: tilt 5s infinite cubic-bezier(0.45, 0, 0.55, 1);
+  display: inline-block;
+  /* sets point of rotation, horizontal and vertical*/
+  transform-origin: center bottom;
+}
+
+/* a tilting animation */
+@keyframes tilt {
+  0% {
+    transform: rotate(8deg);
+  }
+  50% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(8deg);
+  }
 }
 
 .description-content p:last-child {
