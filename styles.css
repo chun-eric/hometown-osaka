@@ -879,6 +879,30 @@ nav li a:hover {
   font-family: "Fraunces", serif;
   font-weight: 600;
   letter-spacing: 2px;
+  opacity: 0;
+  animation: fadeUp 60s infinite;
+  animation-delay: 2.4s; /* matches when h1 animation finishes*/
+  animation-timing-function: ease-out; /* object starts quickly and ends slowly*/
+}
+
+@keyframes fadeUp {
+  /* From 0s to 0.6s (1% of 60s) */
+  0%,
+  1% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  /* At 1.2s (2% of 60s) */
+  2% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* From 1.8s (3%) until 60s (100%) */
+  3%,
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Media Queries for fine-tuning */
@@ -921,6 +945,65 @@ nav li a:hover {
 
   .hero h3 {
     font-size: 4vw;
+  }
+}
+
+/* Bouncy Text Example */
+.bouncy-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.bouncy-text span {
+  display: inline-block;
+  animation: bounceIn 60s infinite;
+}
+
+/* Add delay for each span */
+.bouncy-text span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.bouncy-text span:nth-child(2) {
+  animation-delay: 0.25s;
+}
+.bouncy-text span:nth-child(3) {
+  animation-delay: 0.35s;
+}
+.bouncy-text span:nth-child(4) {
+  animation-delay: 0.45s;
+}
+.bouncy-text span:nth-child(5) {
+  animation-delay: 0.55s;
+}
+.bouncy-text span:nth-child(6) {
+  animation-delay: 0.65s;
+}
+
+@keyframes bounceIn {
+  /* Initial position and very start (0 - 0.9 seconds) */
+  0%,
+  1.5% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  /* At 1.2 seconds */
+  2.5% {
+    transform: translateY(10px);
+    opacity: 0.5;
+  }
+  /* At 2.1s (3.5% of 60s) */
+  3.5% {
+    transform: translateY(-5px);
+    opacity: 0.8;
+  }
+  /* At 2.4s (4%) and remaining ~57.6s */
+  4%,
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -967,6 +1050,10 @@ nav li a:hover {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 20px;
+}
+
+.description-content h3 {
+  margin-bottom: 10px;
 }
 
 .description-content p {
