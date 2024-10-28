@@ -57,7 +57,7 @@ nav#navbar {
 }
 
 .nav-logo {
-  border: 3px solid #222;
+  border: 2px solid #222;
   padding: 10px;
   border-radius: 50%;
   transition: all 0.4s ease-in-out;
@@ -720,58 +720,79 @@ nav li a:hover {
 .sidebar-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   height: 100%;
   width: 100%;
   gap: 30px;
-  align-items: start;
   position: relative;
-
-  margin: 0;
   padding: 0;
 }
 
-.sidebar-container .close-icon {
+#sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+}
+
+.close-signup-icon {
   position: absolute;
   top: 3px;
-  right: 5px;
-  cursor: pointer;
+  left: 5px;
+  cursor: pointer !important;
   margin-bottom: 20px;
   color: #222;
+  margin-left: 30px;
+  font-size: 20px;
+  transition: transform 0.3s ease-in-out;
 }
-.sidebar-container nav {
+
+.close-signup-icon:hover {
+  transform: rotate(180deg);
+}
+
+.sidebar-container .sidebar-nav {
+  position: absolute;
+  top: 20px !important;
   display: flex;
   flex-direction: column;
   gap: 10px;
   justify-content: start;
   align-items: start;
+  margin-top: 60px;
 }
 
 .sidebar-container .sidebar-nav-logo {
-  text-align: center;
+  text-align: left;
   margin-bottom: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   cursor: pointer;
+  margin-left: 30px;
 }
 
 .sidebar-nav-logo img {
-  width: 30px;
-  height: 30px;
-  text-align: center;
+  width: 50px;
+  height: 50px; /* height and width calculation includes padding due to border-box*/
+  text-align: left;
   transition: all 0.3s ease;
+  padding: 8px; /* Add padding inside the border */
+  border: 2px solid #222;
+  border-radius: 50%;
+  box-sizing: border-box; /* Ensures padding is included in width/height */
 }
+
 .sidebar-nav-logo img:hover {
   transform: scale(1.1);
 }
 
-.sidebar-container ul {
+.sidebar-container .sidebar-nav-links {
   display: flex;
   flex-direction: column;
   gap: 30px;
   justify-content: start;
   align-items: start;
+  list-style: none;
+  padding-left: 30px;
 }
 
 .sidebar-nav-buttons {
@@ -779,7 +800,7 @@ nav li a:hover {
   flex-direction: column;
   gap: 20px;
   align-items: start;
-  width: 100%;
+  width: 90%;
   padding-left: 20px;
   border-top: 1px solid #d3d3d3;
   padding-top: 30px;
