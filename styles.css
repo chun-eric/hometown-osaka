@@ -1118,6 +1118,7 @@ nav li a:hover {
 .description-content ul {
   padding-left: 0;
   margin: 0;
+  width: 100%;
 }
 
 .description-content ul > li {
@@ -1125,6 +1126,7 @@ nav li a:hover {
   display: flex;
   align-items: center; /* vertical alignment */
   margin-bottom: 12px;
+  flex-wrap: wrap;
 }
 .description-content ul li > img {
   width: 30px;
@@ -1134,6 +1136,7 @@ nav li a:hover {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease-in-out;
+  flex-shrink: 0; /* prevents image from shrinking */
 }
 
 .description-content ul li > img:hover {
@@ -1156,7 +1159,7 @@ nav li a:hover {
   animation: tilt 5s infinite cubic-bezier(0.45, 0, 0.55, 1);
   display: inline-block;
   /* sets point of rotation, horizontal and vertical*/
-  transform-origin: center bottom;
+  transform-origin: center bottom; /* sets rotation center bottom */
 }
 
 /* a tilting animation */
@@ -1184,30 +1187,35 @@ nav li a:hover {
     justify-content: center;
     gap: 60px;
     width: 100%;
-    max-width: 1600px;
+    max-width: 100%;
     text-align: center;
   }
 
-  .description-image image-1 {
-    max-width: 85%;
+  .description-image {
+    max-width: 90%;
     padding: 0 20px;
+    border-radius: 10px;
   }
 
   .description-content {
-    max-width: 100%;
+    max-width: 95%;
     padding: 0 20px;
     text-align: center;
     justify-content: center;
     align-items: center;
   }
+  .description-content ul li > img {
+    margin-right: 12px;
+  }
 }
 
 @media (max-width: 599px) {
   .description-content h2 {
-    font-size: 50px;
+    font-size: 2.75rem;
   }
   .description-content h3 {
     margin-bottom: 12px;
+    font-size: 1.2rem;
   }
   .description-content p {
     font-size: 18px;
@@ -1218,6 +1226,20 @@ nav li a:hover {
 }
 
 @media (max-width: 480px) {
+  .description-content ul li {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap; /* prevents text wrapping */
+    align-items: center;
+
+    margin-bottom: 26px;
+  }
+
+  .description-content ul li > img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
 }
 
 /* Wave divider */
