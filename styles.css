@@ -13,6 +13,10 @@
   --teal: #39a6a8;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Nunito Sans", sans-serif;
   display: flex;
@@ -25,6 +29,7 @@ body {
   min-height: 100vh;
   /* border: 1px solid black; */
   position: relative;
+  overflow-x: hidden;
 }
 
 .container {
@@ -1566,6 +1571,7 @@ h2 {
   background-position: center;
   width: 40%;
   height: 400px; /* explicity setting height shows the image*/
+  cursor: pointer;
 }
 
 .guide-text {
@@ -1581,7 +1587,7 @@ h2 {
 
 .text p {
   margin: 30px 0px;
-  font-size: 22px;
+  font-size: 20px;
   color: #222;
 }
 
