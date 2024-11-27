@@ -31,7 +31,7 @@ Live and actively maintained
 </div>
 
 <div style="text-align: left;">
-  <img src="./images/osaka-hometown-page.webp" alt="Homepage-small" width="680">
+  <img src="./images/osaka-hometown-page.webp" alt="Homepage-small" width="780">
 </div>
 
 <div style="text-align: left;" height="10">
